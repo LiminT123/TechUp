@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GovCheck</title>
+    <script src="https://kit.fontawesome.com/07db50a2cb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="mastbanner" class="masthead">
+        <img src="./red_lionhead transparent.png" alt="masthead image" id="mastheadImage">
+        <div id="textContainer" class="masthead">
+          <p id="mastText">A Singapore Government Agency Website</p>
+        </div>
+      </div>
+
+      <div id="checkerHeader">
+        <h1 id="myHeader">Trusted sites by GovSG</h1>
+        <p class="headerPara">Not sure if it's a Singapore Government site? Key in your link below!</p>
+        <p class="headerPara">
+          Start surfing with confidence!
+          <i class="fa-solid fa-shield-heart" style="color: #d32709;"></i>
+        </p>
+      </div>
+    </header>
+
+    <div id="search-container">
+      <form onsubmit="event.preventDefault(); checkURL();"></form>
+      <input type="text" id="urlInput" placeholder="Enter a URL" autofocus autocomplete="off">
+      <button class="check" onclick="checkURL()">Check</button>
+    </div>
+  
+    <div class="result">
+      <div class="resultContainer">
+        <h2 id="headerResult">Result</h2><div id="resultContent">
+        <p id="trustedResult"><i class="fa-solid fa-square-check" style="color: #6cf25a;"></i> This is a trusted site by Singapore Gov. Click ahead!</p>
+      <p id="notTrustedResult"><i class="fa-solid fa-triangle-exclamation" style="color: #d7a042;"></i> This is not a Singapore government site. Verify before clicking ahead!</p>
+      </div>
+      <button id="retryButton" onclick="retryButtonClick()">Try again</button>
+      </div>
+      
+    </div>
+  
+    <div id="status">
+      <p>&copy; 2023 Government of Singapore. Last updated on <span id="lastUpdated"></span>.</p>
+    </div>
+
+    <script src="./functions.js"></script>
+  </body>
+</html>
