@@ -34,15 +34,17 @@ body {
     text-align: center;
     color: rgb(26, 24, 21);
     font-family: "Open Sans", sans-serif;
+    position: relative; /* Add relative positioning to #checkerHeader */
   }
   
   #titleImage {
-    align-items: left;
-    position: absolute;
-    display: flex;
-    max-inline-size: 5%;
-    left: 59.7rem;
-
+    max-width: 100px;
+    position: absolute; /* Add absolute positioning to #titleImage */
+    top: 5cqmax; /* Align to the vertical center of #checkerHeader */
+    transform: translateY(-20%); /* Adjust to center the image vertically */
+    align-items: center;
+    right: 31%; 
+    max-height: 50%;
   }
 
   #myHeader {
