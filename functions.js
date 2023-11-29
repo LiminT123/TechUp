@@ -153,16 +153,7 @@ document.getElementById("urlInput").addEventListener("keyup", function (event) {
     }
   
     resultContainer.style.display = "none";
-  
-    // Function to extract the domain from the URL
-    const extractDomain = (url) => {
-        let domain = url.replace(/^(https?:\/\/)?(www\.)?/i, ''); // Remove protocol and www. prefix
-        return domain;
-      };
       
-    const userDomain = extractDomain(userInput);
-  
-    
     if (
       userInput.includes(".gov.sg") ||
       userInput.includes(".for.sg") ||
