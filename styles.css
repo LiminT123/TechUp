@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+      Arial, "Noto Sans", "Liberation Sans", sans-serif;
   }
   
   #mastbanner {
@@ -10,8 +12,6 @@ body {
     max-width: 100%;
     height: 50px;
     position: relative;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-      Arial, "Noto Sans", "Liberation Sans", sans-serif;
     display: flex;
     align-items: center;
   }
@@ -24,7 +24,7 @@ body {
   
   #textContainer {
     position: relative;
-    margin-left: 4rem;
+    margin-left: 4%;
   }
   
   #checkerHeader {
@@ -32,25 +32,23 @@ body {
     text-align: center;
     color: rgb(26, 24, 21);
     font-family: "Open Sans", sans-serif;
-    position: relative; /* Add relative positioning to #checkerHeader */
+    position: relative;
   }
   
-  #titleImage {
-    max-width: 100px;
-    position: absolute; /* Add absolute positioning to #titleImage */
-    top: 5cqmax; /* Align to the vertical center of #checkerHeader */
-    transform: translateY(-20%); /* Adjust to center the image vertically */
-    align-items: center;
-    right: 33%; 
-    max-height: 40%;
-  }
-
   #myHeader {
     margin-bottom: 35px;
   }
   
   .headerPara {
-    line-height: 0%;
+    line-height: 0;
+  }
+  
+  #titleImage {
+    max-width: 100px;
+    position: absolute;
+    right: 33%;
+    transform: translateY(-30%);
+    max-height: 40%;
   }
   
   #search-container {
@@ -59,12 +57,12 @@ body {
     justify-content: center;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
       Arial, "Noto Sans", "Liberation Sans", sans-serif;
-    border-bottom: 1.5px solid #bbb4b4; /* Add a border to the bottom of the search container */
-    padding-top: 25px;
-    padding-bottom: 40px; /* Add padding to create space for the border */
-    width: 70%; /* Adjust the width to change the length of the border */
-    margin: auto; /* Center the container on the page */
-    box-sizing: border-box; /* Include padding and border in the element's total width */
+    border-bottom: 1.5px solid #bbb4b4;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
   }
   
   input {
@@ -72,7 +70,8 @@ body {
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 255px;
+    width: 100%;
+    max-width: 400px;
   }
   
   button {
@@ -91,18 +90,17 @@ body {
   
   .resultContainer {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
     align-items: center;
     position: relative;
     width: 100%;
-    height: 50%;
     margin: 5px auto 0;
   }
   
   #retryButton {
     display: none;
     align-items: center;
-    margin-top: 10px; /* Add space above the retry button */
+    margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
   }
@@ -113,7 +111,7 @@ body {
     background-color: rgb(240, 240, 240);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
       Arial, "Noto Sans", "Liberation Sans", sans-serif;
-    top: 70%; /* Center vertically */
+    top: 70%;
     left: 50%;
     padding-bottom: 5px;
     transform: translate(-50%, -50%);
@@ -126,7 +124,7 @@ body {
     text-align: center;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
       Arial, "Noto Sans", "Liberation Sans", sans-serif;
-    margin-bottom: 5px; /* Add spacing between header and text */
+    margin-bottom: 5px;
   }
   
   #trustedResult,
@@ -146,10 +144,9 @@ body {
     text-align: right;
     bottom: 5ch;
     left: 0;
-    padding: 0%;
+    padding: 0.5rem;
     font-size: 0.8rem;
     padding-left: 1%;
-    font-family: "Open Sans", sans-serif;
   }
   
   #disclaimer {
@@ -157,11 +154,9 @@ body {
     text-align: right;
     bottom: 0;
     left: 0;
-    padding: 0%;
+    padding: 0.5rem;
     font-size: 0.8rem;
     padding-left: 1%;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-      Arial, "Noto Sans", "Liberation Sans", sans-serif;
   }
   
   #status {
@@ -169,9 +164,7 @@ body {
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 0%;
+    padding: 0.5rem;
     font-size: 0.8rem;
-    padding-right: 1%;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-      Arial, "Noto Sans", "Liberation Sans", sans-serif;
   }
+  
