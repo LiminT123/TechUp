@@ -12,6 +12,25 @@ function checkURL() {
     let isTrusted = document.getElementById("trustedResult");
     let notTrusted = document.getElementById("notTrustedResult");
     let retryButton = document.getElementById("retryButton");
+    let whitelistedUrls = [
+    "https://www.a-list.sg",
+    "https://www.activehealth.sg",
+    "https://www.aperforum.org",
+    "https://www.artweek.sg",
+    "https://www.aseanlibrary.org",
+    "https://www.aseanip.org",
+    "https://www.commonspaces.sg",
+    "https://www.embracingparenthood.sg",
+    "ttps://www.familiesforlife.sg",
+    "https://www.forwardsingapore.gov.sg",
+    "https://fulcrum.sg",
+    "https://www.healthhub.sg",
+    "https://www.elitigation.sg",
+    "https://www.ibew.sg",
+    "https://www.bilingualism.sg",
+    "https://www.lumihealth.sg",
+    "govlinkchecker.com",
+  ];
 
     if (userInput.trim() === "") {
         // Display an error message for empty input
@@ -26,7 +45,9 @@ function checkURL() {
     resultContainer.style.display = "none";
     
 
-    if (userInput.includes(".gov.sg") || userInput.includes(".for.sg") || userInput.includes(".for.edu.sg")) {
+    if (userInput.includes(".gov.sg") || userInput.includes(".for.sg") || userInput.includes(".for.edu.sg"))||
+    whitelistedUrls.some((entry) => userInput.includes(entry))
+  ) {
         // Display trusted result
         resultContainer.style.display = "flex";
         headerResult.style.display = "block";
