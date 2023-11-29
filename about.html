@@ -9,14 +9,14 @@
   gtag('js', new Date());
   gtag('config', 'G-BP0DVW50V8');
 </script>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GovLinkChecker</title>
     <script src="https://kit.fontawesome.com/07db50a2cb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./stylesAbout.css" />
   </head>
   <body>
     <header>
@@ -28,36 +28,16 @@
         </div>
       </div>
 
-      <div id="checkerHeader">
-        <img src="https://raw.githubusercontent.com/LiminT123/TechUp/b21fb45911a3a6f20e05756c526a4f36f14220f7/red_lionhead%20transparent.png
-        " alt="title image" id="titleImage">
-        <h1 id="myHeader">Trusted sites by GovSG</h1>
-        <p class="headerPara">Not sure if it's a trusted Singapore government site? Enter the link below!</p>
-        <p class="headerPara">
-          Start surfing with confidence!
-          <i class="fa-solid fa-shield-heart" style="color: #d32709;"></i>
-        </p>
+      <div id="aboutHeader">
+        <h1 id="myHeader">About GovLinkChecker</h1>
+        <p class="aboutHeader">GovLinkChecker is a user-friendly website designed to check the authenticity of links. It aims to help users determine if a given link belongs to the Singapore government or its associated partners, relying on whitelisted domains and a list of trusted sites. </p>
+        <p>It's important to note that GovLinkChecker is a personal project and is currently not endorsed or supported by the Singapore government. Keep in mind that this site does not check the validity of the link, it only verifies its domain.</p>
       </div>
-    </header>
 
-    <div id="search-container">
-      <form onsubmit="event.preventDefault(); checkURL();"></form>
-      <input type="text" id="urlInput" placeholder="Enter a URL" autofocus autocomplete="off">
-      <button class="check" onclick="checkURL()">Check</button>
+      <a id ="goHome" href ="https://govlinkchecker.com/index.html">Return to Home</a>
     </div>
-  
-    <div class="result">
-      <div class="resultContainer">
-        <h2 id="headerResult">Result</h2><div id="resultContent">
-        <p id="trustedResult"><i class="fa-solid fa-square-check" style="color: #0e8a05;"></i> This is a trusted site by Singapore Gov. Click ahead!</p>
-      <p id="notTrustedResult"><i class="fa-solid fa-rectangle-xmark" style="color: #bd0f0f;"></i> This is not a trusted site by Singapore government.</p><p></p> Verify before clicking ahead!
-      </div>
-      <button id="retryButton" onclick="retryButtonClick()">Submit another</button>
-      </div>
-      
-    </div>
-    <div id="About">
-    <a href="./about.html">About</a></div>
+
+    </header>
 
     <div id="disclaimer">
       <p>Disclaimer: This website is a Personal Project and not Government-Supported.</p>
@@ -66,7 +46,16 @@
     <div id="status">
       <p>&copy; 2023 InspiringGov. Last updated on <span id="lastUpdated"></span>.</p>
     </div>
+    <script>
+        function getLastModifiedDate() {
+            let lastModified = new Date(document.lastModified);
+            let options = { year: "numeric", day: "numeric", month: "short" };
+            return lastModified.toLocaleDateString("en-SG", options);
+        }
 
-    <script src="./functions.js"></script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("lastUpdated").innerHTML = getLastModifiedDate();
+        });
+    </script>
   </body>
 </html>
