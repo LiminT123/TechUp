@@ -20,13 +20,13 @@ body {
     width: auto;
     max-height: 70%;
     position: absolute;
-    left: 0.3rem;
+    left: 1rem;
     margin-top: 0;
   }
   
   #textContainer {
     position: relative;
-    left: 3rem;
+    left: 4rem;
   }
   
   #checkerHeader {
@@ -43,8 +43,8 @@ body {
     top: 5cqmax; /* Align to the vertical center of #checkerHeader */
     transform: translateY(-20%); /* Adjust to center the image vertically */
     align-items: center;
-    right: 31%; 
-    max-height: 50%;
+    right: 33%; 
+    max-height: 40%;
   }
 
   #myHeader {
