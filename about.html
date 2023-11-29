@@ -46,8 +46,16 @@
     <div id="status">
       <p>&copy; 2023 InspiringGov. Last updated on <span id="lastUpdated"></span>.</p>
     </div>
+    <script>
+        function getLastModifiedDate() {
+            let lastModified = new Date(document.lastModified);
+            let options = { year: "numeric", day: "numeric", month: "short" };
+            return lastModified.toLocaleDateString("en-SG", options);
+        }
 
-    <script src="./functionsAbout.js"></script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("lastUpdated").innerHTML = getLastModifiedDate();
+        });
+    </script>
   </body>
 </html>
-
