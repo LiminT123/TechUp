@@ -6,8 +6,8 @@ body {
 #mastbanner {
   background-color: rgb(240, 240, 240);
   color: hsl(0, 0%, 28%);
-  font-size: 0.8rem;
-  max-width: 2000px;
+  font-size: 1rem;
+  max-width: 100%;
   height: 50px;
   position: relative;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
@@ -17,10 +17,8 @@ body {
 }
 
 #mastheadImage {
-  width: auto;
-  max-height: 70%;
+  max-height: 100%;
   position: absolute;
-  left: 1rem;
   margin-top: 0;
 }
 
@@ -30,7 +28,7 @@ body {
 }
 
 #aboutHeader {
-  padding-top: 5rem;
+  padding-top: 5rem 10%;
   padding: 5rem;
   padding-left: 20%;
   padding-right: 20%;
@@ -40,21 +38,21 @@ body {
   line-height: 1.5;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 1rem;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Liberation Sans", sans-serif;
   position: relative;
 }
 
 #goHome {
-  position: absolute;
+  position: fixed;
   text-align: right;
-  bottom: 180px;
-  right: 310px;
+  bottom: 45%;
+  right: 25%;
   align-items: center;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Liberation Sans", sans-serif;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 #disclaimer {
@@ -62,7 +60,7 @@ body {
   text-align: right;
   bottom: 0;
   left: 0;
-  padding: 0%;
+  padding: 0.5rem;
   font-size: 0.8rem;
   padding-left: 1%;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
@@ -74,9 +72,19 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-  padding: 0%;
+  padding: 0.5rem;
   font-size: 0.8rem;
   padding-right: 1%;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  #aboutHeader {
+    padding: 5rem 5%; /* Adjusted padding for smaller screens */
+  }
+
+  #goHome {
+    right: 2%; /* Adjusted for smaller screens */
+  }
 }
