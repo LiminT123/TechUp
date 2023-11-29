@@ -7,15 +7,14 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-BP0DVW50V8');
 </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GovCheck</title>
+    <title>GovLinkChecker</title>
     <script src="https://kit.fontawesome.com/07db50a2cb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles new.css" />
   </head>
   <body>
     <header>
@@ -29,7 +28,7 @@
 
       <div id="checkerHeader">
         <h1 id="myHeader">Trusted sites by GovSG</h1>
-        <p class="headerPara">Not sure if it's a Singapore Government site? Key in your link below!</p>
+        <p class="headerPara">Not sure if it's a trusted site by Singapore Government? Enter a link below!</p>
         <p class="headerPara">
           Start surfing with confidence!
           <i class="fa-solid fa-shield-heart" style="color: #d32709;"></i>
@@ -49,19 +48,21 @@
         <p id="trustedResult"><i class="fa-solid fa-square-check" style="color: #6cf25a;"></i> This is a trusted site by Singapore Gov. Click ahead!</p>
       <p id="notTrustedResult"><i class="fa-solid fa-triangle-exclamation" style="color: #d7a042;"></i> This is not a Singapore government site. Verify before clicking ahead!</p>
       </div>
-      <button id="retryButton" onclick="retryButtonClick()">Try again</button>
+      <button id="retryButton" onclick="retryButtonClick()">Submit another</button>
       </div>
       
     </div>
-  
+    <div id="About">
+    <a href="./about.html">About</a></div>
+
     <div id="disclaimer">
-      <p>Disclaimer: This Website is a Personal Project and Not Government-Supported</p>
+      <p>Disclaimer: This website is a Personal Project and not Government-Supported.</p>
     </div>
 
     <div id="status">
-      <p>&copy; 2023 SgGov. Last updated on <span id="lastUpdated"></span>.</p>
+      <p>&copy; 2023 InspiringGov. Last updated on <span id="lastUpdated"></span>.</p>
     </div>
 
-    <script src="./functions.js"></script>
+    <script src="./functions new.js"></script>
   </body>
 </html>
