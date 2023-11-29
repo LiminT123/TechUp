@@ -43,14 +43,6 @@ body {
     line-height: 0;
   }
   
-  #titleImage {
-    max-width: 100px;
-    position: absolute;
-    right: 33%;
-    transform: translateY(-30%);
-    max-height: 40%;
-  }
-  
   #search-container {
     display: flex;
     align-items: center;
