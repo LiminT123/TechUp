@@ -1,35 +1,3 @@
-//database related
-
-import pg from "pg";
-
-const db = new pg.Client({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'TrustedSites',
-  password: 'TechUp2023',
-  port: 5432,
-});    
-
-db.connect();
-
-db.connect((err) => {
-    if (err) {
-        console.error('Error connecting to the database:', err.stack);
-    } else {
-        console.log('Connected to the database');
-        // Perform database query here
-        db.query("SELECT * FROM trustedsites", (queryErr, res) => {
-            if (queryErr) {
-                console.error('Error executing query:', queryErr.stack);
-            } else {
-                let checkResults = res.rows;
-                console.log('Query results:', checkResults);
-            }
-            db.end();
-        });
-    }
-});
-
 document.getElementById("urlInput").addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
