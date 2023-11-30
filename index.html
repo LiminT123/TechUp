@@ -37,9 +37,10 @@
     </header>
 
     <div id="search-container">
-      <form onsubmit="event.preventDefault(); checkURL();"></form>
+      <form onsubmit="event.preventDefault(); checkURL();">
       <input type="text" id="urlInput" placeholder="Enter a URL" autofocus autocomplete="off">
       <button class="check" onclick="checkURL()">Check</button>
+        </form>
     </div>
   
     <div class="result">
